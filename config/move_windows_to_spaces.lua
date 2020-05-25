@@ -1,6 +1,5 @@
 -- from https://github.com/Hammerspoon/hammerspoon/issues/235#issuecomment-101069303
 function moveToSpace(win, space)
-    local mouseOrigin = hs.mouse.getAbsolutePosition()
     local clickPoint = win:zoomButtonRect()
  
     clickPoint.x = clickPoint.x + clickPoint.w + 5
@@ -22,7 +21,9 @@ function moveToSpace(win, space)
     mouseReleaseEvent:post()
     hs.timer.usleep(150000)
  
-    mouse.setAbsolutePosition(mouseOrigin)
+    local frame = win:frame()
+    local point = {x = frame.x + frame.w / 2, y = frame.y + frame.h / 2}
+    hs.mouse.setAbsolutePosition(point)
     -- redrawBorder()
 end
 
