@@ -6,7 +6,7 @@ If you wanna try this out as is, you should just be able to copy the files into 
 * [App Launching](#app-launching)
 * [Miscellaneous](#miscellaneous)
 
-## Window Management Features
+## Window Management
 ### Snap Windows
 Uses hs.grid() to snap windows to certain positions. 
 | Shortcut     | Window Behavior           |
