@@ -6,31 +6,30 @@ configFileWatcher = nil
 
 -- navigate with vin keybinds and between firefox tabs
 mashnav = {"alt"}
-require 'vim_nav'
-require 'firefox'
+require 'config/vim_nav'
+require 'config/firefox'
 
 -- active apps and open windows
 mashlaunch = {"ctrl"}
-require 'launch_apps'
--- require 'launch_websites'
+require 'config/launch_apps'
 
 -- focus on different windows
 mashfocus  = {"ctrl"}
-require 'focus_windows'
+require 'config/focus_windows'
 
 -- snap windows to positions
 mashsnap = {"ctrl", "alt"}
-require 'grid_ui'
-require 'snap_windows'
+require 'config/grid_ui'
+require 'config/snap_windows'
 
 -- move windows to different spaces
 mashmove = {"ctrl", "alt"}
-require 'move_windows_to_spaces'
+require 'config/move_windows_to_spaces'
 
 -- manipulate windows
 mashman = {"ctrl", "alt", "cmd"}
-require 'nudge_windows'
-require 'resize_windows'
+require 'config/nudge_windows'
+require 'config/resize_windows'
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
     hs.reload()
