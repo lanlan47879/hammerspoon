@@ -46,9 +46,9 @@ function launch(app_name)
     hs.application.launchOrFocus(app_name)
     cnt = get_visible_win_cnt(app_name) 
     if app_name == 'Finder' and cnt == 1 then
-        hs.osascript.applescriptFromFile('/Users/alanacquinones/Documents/applescripts/' .. app_name .. 'Window.txt')
+        hs.osascript.applescriptFromFile('/config/launcher_scripts' .. app_name .. 'Window.txt')
     elseif cnt == 0 then
-        hs.osascript.applescriptFromFile('/Users/alanacquinones/Documents/applescripts/' .. app_name .. 'Window.txt')
+        hs.osascript.applescriptFromFile('/config/launcher_scripts' .. app_name .. 'Window.txt')
     end
 
     local win = hs.window.focusedWindow()
