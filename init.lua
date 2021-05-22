@@ -1,30 +1,25 @@
 hs.window.animationDuration = 0.0
-configFileWatcher = nil
 
 require 'config/command_quit'
 
-hyper = {'ctrl', 'alt'}
-meh = {'ctrl', 'shift', 'alt'}
+meh = {'ctrl', 'cmd'}
+hyper = {'ctrl', 'cmd', 'alt'}
 
 -- active apps and open windows
-mashlaunch = meh
+mashlaunch = hyper
 require 'config/launch_apps'
 
 -- focus on different windows
-mashfocus  = meh
---require 'config/focus_windows'
-
--- move windows to different spaces
-mashmove = hyper
--- require 'config/move_windows_to_spaces'
+mashfocus  = hyper
+require 'config/focus_windows'
 
 -- snap windows to positions
-mashsnap = hyper
+mashsnap = meh
 require 'config/grid_ui'
 require 'config/snap_windows'
 
+configFileWatcher = nil
 hs.alert.show("Config loaded")
-
 function reloadConfig()
     if configFileWatcher ~= nil then
         configFileWatcher:stop()

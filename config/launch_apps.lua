@@ -61,7 +61,8 @@ function launch(app_name)
 end
 
 hs.hotkey.bind(mashlaunch, 'return', function() launch('iTerm') end)
-hs.hotkey.bind(mashlaunch, 'f', function() launch('Firefox') end)
+---hs.hotkey.bind(mashlaunch, 'f', function() launch('Firefox') end)
+hs.hotkey.bind(mashlaunch, 's', function() launch('Safari') end)
 hs.hotkey.bind(mashlaunch, 'space', function() launch('Finder') end)
 hs.hotkey.bind(mashlaunch, 'v', function() 
     hs.application.launchOrFocus('Visual Studio Code')
@@ -72,5 +73,5 @@ hs.hotkey.bind(mashlaunch, 'v', function()
 
     local frame = win:frame()
     local point = {x = frame.x + frame.w / 2, y = frame.y + frame.h / 2}
-    hs.mouse.setAbsolutePosition(point)
+    hs.mouse.absolutePosition(point)
 end)

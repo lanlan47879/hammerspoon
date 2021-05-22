@@ -1,5 +1,8 @@
 -- from https://github.com/Hammerspoon/hammerspoon/issues/235#issuecomment-101069303
+-- not working atm
 function moveToSpace(win, space)
+    hs.alert.show("in moveToSpace")
+
     local clickPoint = win:zoomButtonRect()
  
     clickPoint.x = clickPoint.x + clickPoint.w + 5

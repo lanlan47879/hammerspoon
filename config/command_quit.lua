@@ -11,5 +11,3 @@ local function doQuit()
 end
 
 quitModal:bind('cmd', 'q', doQuit)
-
-quitModal:bind('', 'escape', function() quitModal:exit() end)

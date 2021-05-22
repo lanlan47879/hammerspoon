@@ -1,12 +1,12 @@
-local function focusWindow(dir) 
+local function focusWindow(dir)
     if dir == 'north' then
-        hs.window.focusWindowNorth()
+        hs.window.focusedWindow():focusWindowNorth()
     elseif dir == 'east' then
-        hs.window.focusWindowEast()
+        hs.window.focusedWindow():focusWindowEast()
     elseif dir == 'south' then
-        hs.window.focusWindowSouth()
+        hs.window.focusedWindow():focusWindowSouth()
     else 
-        hs.window.focusWindowWest()
+        hs.window.focusedWindow():focusWindowWest()
     end
 
     local win = hs.window.focusedWindow()
@@ -16,7 +16,7 @@ local function focusWindow(dir)
 
     local frame = win:frame()
     local point = {x = frame.x + frame.w / 2, y = frame.y + frame.h / 2}
-    hs.mouse.setAbsolutePosition(point)
+    hs.mouse.absolutePosition(point)
 end
 
 hs.hotkey.bind(mashfocus, "k", function() focusWindow('north') end)

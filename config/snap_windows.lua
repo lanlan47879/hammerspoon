@@ -46,7 +46,7 @@ function positionWindow(x, y, w, h)
 
 	local frame = win:frame()
     local point = {x = frame.x + frame.w / 2, y = frame.y + frame.h / 2}
-	hs.mouse.setAbsolutePosition(point)
+	hs.mouse.absolutePosition(point)
 	-- redrawBorder()
 end
 
