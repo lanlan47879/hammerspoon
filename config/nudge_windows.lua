@@ -16,7 +16,7 @@ local function pushWindow(dir)
     -- redrawBorder()
 end
 
-hs.hotkey.bind(mashman, 'h', function() pushWindow('left') end, nil, function() pushWindow('left') end) 
-hs.hotkey.bind(mashman, 'j', function() pushWindow('down') end, nil, function() pushWindow('down') end) 
-hs.hotkey.bind(mashman, 'k', function() pushWindow('up') end, nil, function() pushWindow('up') end) 
-hs.hotkey.bind(mashman, 'l', function() pushWindow('right') end, nil, function() pushWindow('right') end) 
+hs.hotkey.bind(mashman, 'z', function() pushWindow('left') end, nil, function() pushWindow('left') end) 
+hs.hotkey.bind(mashman, 'x', function() pushWindow('down') end, nil, function() pushWindow('down') end) 
+hs.hotkey.bind(mashman, 'c', function() pushWindow('up') end, nil, function() pushWindow('up') end) 
+hs.hotkey.bind(mashman, 'v', function() pushWindow('right') end, nil, function() pushWindow('right') end) 

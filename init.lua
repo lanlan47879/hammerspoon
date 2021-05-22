@@ -1,39 +1,28 @@
 hs.window.animationDuration = 0.0
 configFileWatcher = nil
 
--- draw border around active window
--- require 'draw_border'
+require 'config/command_quit'
 
--- navigate with vin keybinds and between firefox tabs
-mashnav = {"alt"}
-require 'config/vim_nav'
-require 'config/firefox'
+hyper = {'ctrl', 'alt'}
+meh = {'ctrl', 'shift', 'alt'}
 
 -- active apps and open windows
-mashlaunch = {"ctrl"}
+mashlaunch = meh
 require 'config/launch_apps'
 
 -- focus on different windows
-mashfocus  = {"ctrl"}
-require 'config/focus_windows'
+mashfocus  = meh
+--require 'config/focus_windows'
+
+-- move windows to different spaces
+mashmove = hyper
+-- require 'config/move_windows_to_spaces'
 
 -- snap windows to positions
-mashsnap = {"ctrl", "alt"}
+mashsnap = hyper
 require 'config/grid_ui'
 require 'config/snap_windows'
 
--- move windows to different spaces
-mashmove = {"ctrl", "alt"}
-require 'config/move_windows_to_spaces'
-
--- manipulate windows
-mashman = {"ctrl", "alt", "cmd"}
-require 'config/nudge_windows'
-require 'config/resize_windows'
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
-    hs.reload()
-  end)
 hs.alert.show("Config loaded")
 
 function reloadConfig()

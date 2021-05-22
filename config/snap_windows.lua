@@ -52,13 +52,13 @@ end
 
 -- maximize, center
 hs.hotkey.bind(mashsnap, 'return', function() positionWindow(x.leftWindow, y.topWindow, w.fullWindow, h.fullWindow)  end)
-hs.hotkey.bind(mashsnap, 'c', function() positionWindow(x.centerWindow, y.centerWindow, w.centerWindow, h.centerWindow) end)
+hs.hotkey.bind(mashsnap, 'space', function() positionWindow(x.centerWindow, y.centerWindow, w.centerWindow, h.centerWindow) end)
 
 -- move left, right, up, down
-hs.hotkey.bind(mashsnap, "h", function() positionWindow(x.leftWindow, y.topWindow, w.halfWindow, h.fullWindow) end)
-hs.hotkey.bind(mashsnap, "j", function() positionWindow(x.leftWindow, y.bottomWindow, w.fullWindow, h.halfWindow) end)
-hs.hotkey.bind(mashsnap, "k", function() positionWindow(x.leftWindow, y.topWindow, w.fullWindow, h.halfWindow) end)
-hs.hotkey.bind(mashsnap, "l", function() positionWindow(x.rightWindow, y.topWindow, w.halfWindow, h.fullWindow) end)
+hs.hotkey.bind(mashsnap, 'h', function() positionWindow(x.leftWindow, y.topWindow, w.halfWindow, h.fullWindow) end)
+hs.hotkey.bind(mashsnap, 'j', function() positionWindow(x.leftWindow, y.bottomWindow, w.fullWindow, h.halfWindow) end)
+hs.hotkey.bind(mashsnap, 'k', function() positionWindow(x.leftWindow, y.topWindow, w.fullWindow, h.halfWindow) end)
+hs.hotkey.bind(mashsnap, 'l', function() positionWindow(x.rightWindow, y.topWindow, w.halfWindow, h.fullWindow) end)
 
 -- move top left, top right, bottom left, bottom right
 hs.hotkey.bind(mashsnap, 'y', function() positionWindow(x.leftWindow, y.topWindow, w.halfWindow, h.halfWindow) end) 
@@ -71,10 +71,7 @@ hs.hotkey.bind(mashsnap, ';', function() positionWindow(x.leftWindow, y.centerWi
 hs.hotkey.bind(mashsnap, '\'', function() positionWindow(x.rightWindow, y.centerWindow, w.centerWindow, h.centerWindow) end)
 
 -- move left two thirds right one third, right two thirds left one third
-hs.hotkey.bind(mashsnap, 'b', function() positionWindow(x.leftTwoThirdsWindow, y.topWindow, w.twoThirdsWindow, h.fullWindow) end) 
-hs.hotkey.bind(mashsnap, 'n', function() positionWindow(x.rightOneThirdWindow, y.topWindow, w.oneThirdWindow, h.fullWindow) end) 
-
-hs.hotkey.bind(mashsnap, 'm', function() positionWindow(x.leftOneThirdWindow, y.topWindow, w.oneThirdWindow, h.fullWindow) end)
-hs.hotkey.bind(mashsnap, ',', function() positionWindow(x.rightTwoThirdsWindow, y.topWindow, w.twoThirdsWindow, h.fullWindow) end) 
-hs.hotkey.bind(mashsnap, '.', function() positionWindow(x.leftOneThirdWindow, y.topWindow, w.oneThirdWindow, h.halfWindow) end)
-hs.hotkey.bind(mashsnap, '/', function() positionWindow(x.leftOneThirdWindow, y.bottomWindow, w.oneThirdWindow, h.halfWindow) end)
+hs.hotkey.bind(mashsnap, 'n', function() positionWindow(x.leftTwoThirdsWindow, y.topWindow, w.twoThirdsWindow, h.fullWindow) end) 
+hs.hotkey.bind(mashsnap, 'm', function() positionWindow(x.rightOneThirdWindow, y.topWindow, w.oneThirdWindow, h.fullWindow) end) 
+hs.hotkey.bind(mashsnap, ',', function() positionWindow(x.leftOneThirdWindow, y.topWindow, w.oneThirdWindow, h.fullWindow) end)
+hs.hotkey.bind(mashsnap, '.', function() positionWindow(x.rightTwoThirdsWindow, y.topWindow, w.twoThirdsWindow, h.fullWindow) end) 

@@ -16,7 +16,7 @@ local function resizeWindow(desc)
     -- redrawBorder()
 end
 
-hs.hotkey.bind(mashman, 'y', function() resizeWindow('thinner') end, nil, function() resizeWindow('thinner') end) 
-hs.hotkey.bind(mashman, 'o', function() resizeWindow('wider') end, nil, function() resizeWindow('wider') end) 
-hs.hotkey.bind(mashman, 'u', function() resizeWindow('taller') end, nil, function() resizeWindow('taller') end) 
-hs.hotkey.bind(mashman, 'i', function() resizeWindow('shorter') end, nil, function() resizeWindow('shorter') end) 
+hs.hotkey.bind(mashman, 'a', function() resizeWindow('thinner') end, nil, function() resizeWindow('thinner') end) 
+hs.hotkey.bind(mashman, 'f', function() resizeWindow('wider') end, nil, function() resizeWindow('wider') end) 
+hs.hotkey.bind(mashman, 's', function() resizeWindow('taller') end, nil, function() resizeWindow('taller') end) 
+hs.hotkey.bind(mashman, 'd', function() resizeWindow('shorter') end, nil, function() resizeWindow('shorter') end) 
